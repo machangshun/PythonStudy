@@ -1,0 +1,10 @@
+name:0,studentId:0,score:89
+name:1,studentId:1,score:90
+name:2,studentId:2,score:91
+name:3,studentId:3,score:92
+name:4,studentId:4,score:93
+name:5,studentId:5,score:94
+name:6,studentId:6,score:95
+name:7,studentId:7,score:96
+name:8,studentId:8,score:97
+name:9,studentId:9,score:98
