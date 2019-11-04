@@ -1,4 +1,4 @@
-from LTZJ.flyObject import FlyObject
+from LTZJ_2.flyObject import FlyObject
 class Bullet(FlyObject):
     def __init__(self,screen,image,heroX,heroY):
         self.screen = screen

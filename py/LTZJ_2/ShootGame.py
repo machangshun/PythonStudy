@@ -50,12 +50,13 @@
 3.由上往下4课子弹 BossBullet
 """
 import  pygame,sys,random
-from LTZJ.SetImage import Setting
-from LTZJ.hero import  Hero
-from LTZJ.bullet import Bullet
-from LTZJ.airplane import AirPlane
-from LTZJ.love import Love
-from LTZJ.bossplane import BossPlane
+from LTZJ_2.SetImage import Setting
+from LTZJ_2.hero import  Hero
+from LTZJ_2.bullet import Bullet
+from LTZJ_2.airplane import AirPlane
+from LTZJ_2.love import Love
+from LTZJ_2.bossplane import BossPlane
+from LTZJ_2.bossbullet import BossBullet
 class ShootGame(object):
     '''第一区域:变量声明区域'''
     def __init__(self):
@@ -75,8 +76,11 @@ class ShootGame(object):
         self.flys = []
         #love
         self.love = []
-
-
+        #boss机
+        self.flag = 4
+        self.boss = BossPlane(self.screen,self.setImage.boss)
+        self.bossbu = []
+        self.flag = 0
     '''第二区域:main函数区域'''
     def main(self):
         # 2.1 设置窗口标题
@@ -113,13 +117,16 @@ class ShootGame(object):
     def stepAction(self):
         #1.调用英雄机走一步函数
         self.hero.step()
+        print(self.hero)
         for bt in self.bullets:
             bt.step()
         for fly in self.flys:
             fly.step()
         for love_ in self.love:
             love_.step()
-
+        self.boss.step()
+        for bu in self.bossbu:
+            bu.step()
 
     #3.5调用生成函数
     def enterAction(self):
@@ -133,10 +140,26 @@ class ShootGame(object):
             bt = Bullet(self.screen, self.setImage.bulletsImage, btX,btY)
             self.bullets.append(bt)
         if self.enterIndex%100 == 0:
+            bossX = self.boss.x + self.boss.width/2 - 50
+            bossY = self.boss.y + 200
+            if self.boss.flag != 4:
+                self.bossbu.append(BossBullet(self.screen, self.setImage.bossbu, bossX, bossY))
+                self.bossbu.append(BossBullet(self.screen, self.setImage.bossbu, bossX-50, bossY))
+                self.bossbu.append(BossBullet(self.screen, self.setImage.bossbu, bossX + 100, bossY))
+                self.bossbu.append(BossBullet(self.screen, self.setImage.bossbu, bossX + 150, bossY))
+
+        if self.enterIndex%100 == 0:
             ap = AirPlane(self.screen,self.setImage.flysImageList)
             self.flys.append(ap)
-        if self.enterIndex%1000 == 0:
+        if self.enterIndex%500 == 0:
             self.love.append(Love(self.screen, self.setImage.loveImageList))
+        # if self.enterIndex%1000 == 0:
+        #     if self.flag == 0:
+        #         self.boss.append(BossPlane(self.screen, self.setImage.boss))
+        #         self.flag = 1
+        #     else:
+        #         pass
+
 
     '''第四区域:绘制函数区域'''
     def paint(self):
@@ -146,10 +169,14 @@ class ShootGame(object):
         self.hero.blitMe()
         #4.3绘制英雄机子弹
         self.paintBullet()
+        self.paintBossbu()
         #4.4绘制敌机
         self.paintFly()
         #4.5绘制爱心
         self.paintLove()
+        #4.6绘制boss
+        #self.paintBoss()
+        self.boss.blitMe()
     # 4.1 绘制背景图
     def paintBack(self):
         # 修改背景图坐标
@@ -161,11 +188,14 @@ class ShootGame(object):
         # 循环
         if self.backY > 768:
             self.backY = 0
+
     #4.3绘制英雄机子弹
     def paintBullet(self):
         for bt in self.bullets:
             bt.blitMe()
-
+    def paintBossbu(self):
+        for bu in self.bossbu:
+            bu.blitMe()
     #4.4绘制敌机
     def paintFly(self):
         for fly in self.flys:
@@ -175,6 +205,11 @@ class ShootGame(object):
     def paintLove(self):
         for love_ in self.love:
             love_.blitMe()
+    #绘制boss
+    # def paintBoss(self):
+    #     for boss_ in self.boss:
+    #         boss_.blitMe()
+
 
 if __name__ == '__main__':
     game = ShootGame()

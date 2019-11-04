@@ -1,7 +1,7 @@
 '''
 敌机类
 '''
-from LTZJ.flyObject import FlyObject
+from LTZJ_2.flyObject import FlyObject
 import random
 class AirPlane(FlyObject):
     def __init__(self,screen,images):
