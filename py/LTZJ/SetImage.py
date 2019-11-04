@@ -13,14 +13,18 @@ class Setting(object):
         self.heroImageList = self.getHeroImage()
         #3.英雄机子弹
         self.bulletsImage = pygame.image.load("img/bullets.png")
-
+        self.flysImageList = self.getflysImage()
     # 2.获取英雄机图片列表
     def getHeroImage(self):
         list = []
         for i in range(0,10):
             list.append(pygame.image.load("img/ws0%d.png"%i))
         return list
-
-
+    #3.敌机
+    def getflysImage(self):
+        list = []
+        for i in range(0,6):
+            list.append(pygame.image.load("img/flys%d.png"%i))
+        return list
 
 

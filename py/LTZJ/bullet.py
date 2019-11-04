@@ -3,6 +3,7 @@ class Bullet(FlyObject):
     def __init__(self,screen,image,heroX,heroY):
         self.screen = screen
         self.image = image
+
         self.width = self.image.get_rect()[2]
         self.height = self.image.get_rect()[3]
         self.x = heroX

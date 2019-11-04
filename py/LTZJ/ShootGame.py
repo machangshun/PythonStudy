@@ -1,10 +1,11 @@
 '''
 雷霆战机
 '''
-import  pygame,sys
+import  pygame,sys,random
 from LTZJ.SetImage import Setting
 from LTZJ.hero import  Hero
 from LTZJ.bullet import Bullet
+from LTZJ.airplane import AirPlane
 """
 雷霆战机
 1.架构整个框架
@@ -47,6 +48,11 @@ from LTZJ.bullet import Bullet
     5.5第四区域 4.4循环遍历所有的敌机并调用blitMe()函数
     5.6第三区域 3.3stepAction函数 遍历 调用step函数
     5.7第三区域 3.5函数中 调整生成频率值
+    
+作业：
+1.爱心 Love 走S型
+2.boss机 由下往上 再往下 在350 > y 内反弹
+3.由上往下4课子弹 BossBullet
 """
 class ShootGame(object):
     '''第一区域:变量声明区域'''
@@ -63,7 +69,8 @@ class ShootGame(object):
         self.bullets = []
         #1.6频率值
         self.enterIndex = 0
-
+        #敌机
+        self.flys = []
     '''第二区域:main函数区域'''
     def main(self):
         # 2.1 设置窗口标题
@@ -96,26 +103,29 @@ class ShootGame(object):
         self.hero.moveTo(mouseX,mouseY)
         #3.5设置调用生成函数
         self.enterAction()
-
     #3.3走一步函数
     def stepAction(self):
         #1.调用英雄机走一步函数
         self.hero.step()
         for bt in self.bullets:
             bt.step()
+        for fly in self.flys:
+            fly.step()
 
     #3.5调用生成函数
     def enterAction(self):
         #修改频率值
         self.enterIndex += 1
-
         #1.生成英雄机子弹
-        if self.enterIndex%40 == 0:
+        if self.enterIndex%20 == 0:
             #调整坐标
             btX = self.hero.x + self.hero.width/2
             btY = self.hero.y - 10
             bt = Bullet(self.screen, self.setImage.bulletsImage, btX,btY)
             self.bullets.append(bt)
+        if self.enterIndex%100 == 0:
+            ap = AirPlane(self.screen, self.setImage.flysImageList)
+            self.flys.append(ap)
 
 
     '''第四区域:绘制函数区域'''
@@ -126,8 +136,8 @@ class ShootGame(object):
         self.hero.blitMe()
         #4.3绘制英雄机子弹
         self.paintBullet()
-
-
+        #4.4绘制敌机
+        self.paintFly()
     # 4.1 绘制背景图
     def paintBack(self):
         # 修改背景图坐标
@@ -143,6 +153,11 @@ class ShootGame(object):
     def paintBullet(self):
         for bt in self.bullets:
             bt.blitMe()
+
+    #4.4绘制敌机
+    def paintFly(self):
+        for fly in self.flys:
+            fly.blitMe()
 
 
 if __name__ == '__main__':
