@@ -1,4 +1,4 @@
-import pygame
+import pygame,sys
 import pyecharts
 import turtle as tr
 for i in range(4):
