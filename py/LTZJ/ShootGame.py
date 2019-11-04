@@ -4,6 +4,7 @@
 import  pygame,sys
 from LTZJ.SetImage import Setting
 from LTZJ.hero import  Hero
+from LTZJ.bullet import Bullet
 """
 雷霆战机
 1.架构整个框架
@@ -32,6 +33,20 @@ from LTZJ.hero import  Hero
     4.3第三区域 3.5enterAction函数 添加子弹到列表中
     4.4SetImage类中 1.3 设置变量 bulletsImage
     4.5第四区域 4.3 绘制英雄机子弹paintBullet()
+    4.6第三区域 3.3stepAction 调用英雄机子弹走一步
+    4.7第一区域 声明变量 self.enterIndex = 0 频率值
+    4.8第三区域 3.5 enterAction中调整频率值
+    4.9第三区域 3.5 enter Action中调整坐标值
+    
+5.敌机
+    5.1新建AirPlane类 继承FlyObject
+        注意事项：坐标轴 随机产生 
+    5.2第一区域 声明变量 self.flys = []
+    5,3第三区域 3.5 enterAction函数 添加飞行物对象
+    5.4 第四区域 4.4调用paintFly()
+    5.5第四区域 4.4循环遍历所有的敌机并调用blitMe()函数
+    5.6第三区域 3.3stepAction函数 遍历 调用step函数
+    5.7第三区域 3.5函数中 调整生成频率值
 """
 class ShootGame(object):
     '''第一区域:变量声明区域'''
@@ -44,7 +59,10 @@ class ShootGame(object):
         self.backY = 0
         # 1.4 设置英雄机
         self.hero = Hero(self.screen,self.setImage.heroImageList)
-
+        #1.5设置英雄机子弹列表
+        self.bullets = []
+        #1.6频率值
+        self.enterIndex = 0
 
     '''第二区域:main函数区域'''
     def main(self):
@@ -76,10 +94,28 @@ class ShootGame(object):
         #3.4跟随鼠标移动
         mouseX,mouseY = pygame.mouse.get_pos()
         self.hero.moveTo(mouseX,mouseY)
+        #3.5设置调用生成函数
+        self.enterAction()
+
     #3.3走一步函数
     def stepAction(self):
         #1.调用英雄机走一步函数
         self.hero.step()
+        for bt in self.bullets:
+            bt.step()
+
+    #3.5调用生成函数
+    def enterAction(self):
+        #修改频率值
+        self.enterIndex += 1
+
+        #1.生成英雄机子弹
+        if self.enterIndex%40 == 0:
+            #调整坐标
+            btX = self.hero.x + self.hero.width/2
+            btY = self.hero.y - 10
+            bt = Bullet(self.screen, self.setImage.bulletsImage, btX,btY)
+            self.bullets.append(bt)
 
 
     '''第四区域:绘制函数区域'''
@@ -88,6 +124,8 @@ class ShootGame(object):
         self.paintBack()
         # 4.2 绘制英雄机
         self.hero.blitMe()
+        #4.3绘制英雄机子弹
+        self.paintBullet()
 
 
     # 4.1 绘制背景图
@@ -101,7 +139,10 @@ class ShootGame(object):
         # 循环
         if self.backY > 768:
             self.backY = 0
-
+    #4.3绘制英雄机子弹
+    def paintBullet(self):
+        for bt in self.bullets:
+            bt.blitMe()
 
 
 if __name__ == '__main__':
