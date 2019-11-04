@@ -8,7 +8,7 @@ import pygame
 class Setting(object):
     def __init__(self):
         # 1. 背景图
-        self.background = pygame.image.load("background.jpg")
+        self.background = pygame.image.load("img/background.jpg")
         # 2. 英雄机图片列表
         self.heroImageList = self.getHeroImage()
 
@@ -17,7 +17,7 @@ class Setting(object):
     def getHeroImage(self):
         list = []
         for i in range(0,10):
-            list.append(pygame.image.load("ws0%d.png"%i))
+            list.append(pygame.image.load("img/ws0%d.png"%i))
         return list
 
 

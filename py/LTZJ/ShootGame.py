@@ -19,14 +19,19 @@ from LTZJ.hero import  Hero
     3.3 第一区域 设置英雄机属性  self.hero
     3.4 第四区域 绘制英雄机 
     
-课后作业:
-1.看看刚刚所写的雷霆战机
-2.找不同 
+    3.5FlyObject类中 添加抽象函数step函数 子类必须重写
+    3.6Hero类中 重写step函数
+    3.7第三区域 3.3设置走一步业务处理函数 stepAction()
+    
+    3.8 第三区域 3.4 设置英雄机跟随鼠标移动
+    3.9Hero类中 添加moveTo(mX,mY)
 
-    列表 [
-         x,y,w,h
-        [100,100,30,30],
-    ]
+4.子弹
+    4.1新建类Bullet类 继承FlyObject
+    4.2第一区域 声明变量self.bullets 存储英雄机子弹
+    4.3第三区域 3.5enterAction函数 添加子弹到列表中
+    4.4SetImage类中 1.3 设置变量 bulletsImage
+    4.5第四区域 4.3 绘制英雄机子弹paintBullet()
 """
 class ShootGame(object):
     '''第一区域:变量声明区域'''
@@ -63,6 +68,18 @@ class ShootGame(object):
             # 3.2 判断是否退出
             if event.type == pygame.QUIT:
                 sys.exit()
+        '''
+        业务处理区域
+        '''
+        #3.3走一步业务
+        self.stepAction()
+        #3.4跟随鼠标移动
+        mouseX,mouseY = pygame.mouse.get_pos()
+        self.hero.moveTo(mouseX,mouseY)
+    #3.3走一步函数
+    def stepAction(self):
+        #1.调用英雄机走一步函数
+        self.hero.step()
 
 
     '''第四区域:绘制函数区域'''

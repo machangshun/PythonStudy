@@ -17,8 +17,20 @@ class Hero(FlyObject):
         # 1.4 设置坐标
         self.x = 100
         self.y = 100
+        self.index = 0
         '''调用父类
         super:调用父类
         '''
         super(Hero,self).__init__(screen,self.image,self.x,self.y)
 
+    #2.走一步函数
+    def step(self):
+        # 1.调整飞行物坐标
+        # 2.动画效果
+        self.index += 1
+        ix = self.index/10%len(self.images)
+        self.image = self.images[int(ix)]
+    #3.鼠标移动
+    def moveTo(self,mouseX,mouseY):
+        self.x = mouseX-self.width/2
+        self.y = mouseY-self.height/2

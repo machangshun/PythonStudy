@@ -24,6 +24,9 @@ class FlyObject(object):
     def blitMe(self):
         self.screen.blit(self.image,(self.x,self.y))
 
+    @abc.abstractclassmethod
+    def step(self):
+       pass
 
 
 
