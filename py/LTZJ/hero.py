@@ -18,6 +18,7 @@ class Hero(FlyObject):
         self.x = 100
         self.y = 100
         self.index = 0
+        self.life = 10
         '''调用父类
         super:调用父类
         '''

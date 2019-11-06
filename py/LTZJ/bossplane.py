@@ -24,6 +24,7 @@ class Boss(FlyObject):
         self.x = 512/2 - self.width/2
         self.y = 768+random.randint(0,768)
         # 动画效果
+        self.life = 100
         self.index = 0
         '''移动参数'''
         self.xStep = 1

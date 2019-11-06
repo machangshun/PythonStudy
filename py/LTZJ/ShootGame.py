@@ -4,7 +4,6 @@
 """
 雷霆战机
 1.架构整个框架
-
 2.背景绘制
     2.1 新建类 setting类===>存储所有的图片处理
     2.2 导入 第一区域 声明属性 self.set ===>Setting(类)==>background(属性)
@@ -45,9 +44,8 @@
     5.7第三区域 3.5函数中 调整生成频率值
 
 作业：
-1.爱心 Love 走S型
-2.boss机 由下往上 再往下 在350 > y 内反弹
-3.由上往下4课子弹 BossBullet
+英雄机子弹与boss机碰撞
+boss子弹碰撞英雄机
 """
 import  pygame,sys,random
 from LTZJ.SetImage import Setting
@@ -110,6 +108,10 @@ class ShootGame(object):
         self.hero.moveTo(mouseX,mouseY)
         #3.5设置调用生成函数
         self.enterAction()
+        #调用碰撞函数
+        self.hitAction()
+
+
     #3.3走一步函数
     def stepAction(self):
         #1.调用英雄机走一步函数
@@ -140,7 +142,7 @@ class ShootGame(object):
             self.flys.append(ap)
         if self.enterIndex%1000 == 0:
             self.love.append(Love(self.screen, self.setImage.loveImageList))
-        if self.enterIndex%200 == 0:
+        if self.enterIndex%500 == 0:
             self.bss.append(Boss(self.screen,self.setImage.bossImages))
         if len(self.bss) > 0 and self.enterIndex % 120 == 0:
             for boss in self.bss:
@@ -149,6 +151,62 @@ class ShootGame(object):
                     for i in range(0, 4):
                         self.bssBts.append(
                             BossBullet(self.screen, self.setImage.bossBullet, boss.x + i * xw, boss.y + boss.height))
+
+
+    def hitAction(self):
+        for bt in self.bullets:
+            self.hit(bt)
+        for bt in self.bullets:
+            self.hitboss(bt)
+        for bbt in self.bssBts:
+            self.hithero(bbt)
+    def hit(self,bt):
+        #1.设置变量
+        hitIndex = -1
+        for i in range(0,len(self.flys)):
+            #3.进行判断比较
+            if self.flys[i].hitBy(bt):
+                #4.将下标赋值给hitIndex
+                hitIndex = i
+                break
+        #5.根据碰撞变量判断
+        if hitIndex != -1:
+            #获取飞行物对象
+            fly = self.flys[hitIndex]
+            #匹配判断
+            if isinstance(fly,Love):
+                pass
+            if isinstance(fly,AirPlane):
+                pass
+            #6.删除飞行物
+            del self.flys[hitIndex]
+            self.bullets.remove(bt)
+
+    def hitboss(self,bt):
+        # 1.设置变量
+        hitIndex = -1
+        for i in range(0, len(self.bss)):
+            # 3.进行判断比较
+            if self.bss[i].hitBy(bt):
+                # 4.将下标赋值给hitIndex
+                hitIndex = i
+                break
+        # 5.根据碰撞变量判断
+        if hitIndex != -1:
+            self.bss[hitIndex].life -= 10
+
+            # 6.删除飞行物
+            if self.bss[hitIndex].life < 0:
+                del self.bss[hitIndex]
+            if self.bullets.count(bt) > 0:
+                self.bullets.remove(bt)
+
+    def hithero(self,bbt):
+        if self.hero.hitBy(bbt):
+            self.hero.life -= 10
+            self.bssBts.remove(bbt)
+            if self.hero.life < 0:
+                pass
     '''第四区域:绘制函数区域'''
     def paint(self):
         # 4.1 绘制背景
