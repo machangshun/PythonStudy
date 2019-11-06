@@ -15,9 +15,20 @@ class Setting(object):
         self.bulletsImage = pygame.image.load("img/bullets.png")
         self.flysImageList = self.getflysImage()
         self.loveImageList = self.getLoveImage()
-        self.boss = []
-        self.boss.append(self.getBossUpImage())
-        self.boss.append(self.getBossDownImage())
+        self.bossImages = [
+            [
+                pygame.image.load("img/bosss0.png"),
+                pygame.image.load("img/bosss1.png"),
+            ],
+            [
+                pygame.image.load("img/boss0.png"),
+                pygame.image.load("img/boss1.png"),
+            ]
+        ]
+        self.bossBullet = [
+            pygame.image.load("img/bossbu0.png"),
+            pygame.image.load("img/bossbu1.png")
+        ]
     # 2.获取英雄机图片列表
     def getHeroImage(self):
         list = []
@@ -36,12 +47,3 @@ class Setting(object):
         for i in range(0,9):
             list.append(pygame.image.load("img/qq%02d.png"%i))
         return list
-    def getBossUpImage(self):
-        list = []
-        for i in range(0, 2):
-            list.append(pygame.image.load("img/bosss%d.png" % i))
-        return list
-    def getBossDownImage(self):
-        list = []
-        for i in range(0, 2):
-            list.append(pygame.image.load("img/boss%d.png" % i))

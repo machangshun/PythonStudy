@@ -1,59 +1,61 @@
 '''
-bossplane
+Boss
 '''
 from LTZJ.flyObject import FlyObject
-import random
-class BossPlane(FlyObject):
+import  random
+class Boss(FlyObject):
+    # 1.初始化函数
     def __init__(self,screen,images):
         self.screen = screen
+        '''
+        二维图片列表
+        [
+        第一套动作
+        第二套动作
+        ]
+        
+        '''
         self.images = images
-        self.image = self.images[0]
+        #  变换动画效果参数
+        self.bsIndex = 0
+        self.image = self.images[self.bsIndex][0]
         self.width = self.image.get_rect()[2]
-        self.height = self.image.get_rect()[3]
-        self.x = random.randint(0,512-self.width)
-        self.y = random.randint(768,768*2)
+        self.height= self.image.get_rect()[3]
+        self.x = 512/2 - self.width/2
+        self.y = 768+random.randint(0,768)
+        # 动画效果
         self.index = 0
-        self.flag = 4
-        super(BossPlane,self).__init__(screen,self.image,self.x,self.y)
+        '''移动参数'''
+        self.xStep = 1
+        self.yStep = 1
 
-        def step(self):
-            if self.flag == 4:
-                self.y -= 1
+        # 调用父类
+        super(Boss,self).__init__(screen,self.image,self.x,self.y)
+
+    # 2.走一步
+    def step(self):
+        # 1.坐标修改
+        # 1.1 由下往上
+        if self.bsIndex == 0:
+            self.y -= 2
+        # 1.2 修改变量
+        if self.y  < -self.height:
+            self.bsIndex = 1
+        # 1.3 由上往下
+        if self.bsIndex == 1:
+            if self.x > 512-self.width:
+                self.xStep = -1
+            if self.x < 0:
+                self.xStep = 1
             if self.y < 0:
-                if self.flag == 4:
-                    self.flag = 0
-                elif self.flag == 3:
-                    self.flag = 0
-                else:
-                    self.flag = 1
-            if self.x > 512 - self.width:
-                if self.flag == 0:
-                    self.flag = 1
-                else:
-                    self.flag = 2
-            if self.y >= 350 - self.height:
-                if self.flag == 1:
-                    self.flag = 2
-                else:
-                    self.flag = 3
-            if self.x <= 0:
-                if self.flag == 2:
-                    self.flag = 3
-                else:
-                    self.flag = 1
+                self.yStep = 1
+            if self.y  > 350:
+                self.yStep = -1
+            self.x += self.xStep
+            self.y += self.yStep
 
-            if self.flag == 0:
-                self.x += 1
-                self.y += 1
-            if self.flag == 1:
-                self.x -= 1
-                self.y += 1
-            if self.flag == 2:
-                self.x -= 1
-                self.y -= 1
-            if self.flag == 3:
-                self.x += 1
-                self.y -= 1
+
+        # 2.动画效果
         self.index += 1
-        ix = self.index / 10 % len(self.images)
-        self.image = self.images[int(ix)]
+        ix = self.index/10%len(self.images)
+        self.image = self.images[self.bsIndex][int(ix)]

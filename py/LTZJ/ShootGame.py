@@ -55,7 +55,8 @@ from LTZJ.hero import  Hero
 from LTZJ.bullet import Bullet
 from LTZJ.airplane import AirPlane
 from LTZJ.love import Love
-from LTZJ.bossplane import BossPlane
+from LTZJ.bossplane import Boss
+from LTZJ.BossBullet import BossBullet
 class ShootGame(object):
     '''第一区域:变量声明区域'''
     def __init__(self):
@@ -75,8 +76,8 @@ class ShootGame(object):
         self.flys = []
         #love
         self.love = []
-
-
+        self.bss = []
+        self.bssBts = []
     '''第二区域:main函数区域'''
     def main(self):
         # 2.1 设置窗口标题
@@ -119,8 +120,10 @@ class ShootGame(object):
             fly.step()
         for love_ in self.love:
             love_.step()
-
-
+        for boss in self.bss:
+            boss.step()
+        for bts in self.bssBts:
+            bts.step()
     #3.5调用生成函数
     def enterAction(self):
         #修改频率值
@@ -137,7 +140,15 @@ class ShootGame(object):
             self.flys.append(ap)
         if self.enterIndex%1000 == 0:
             self.love.append(Love(self.screen, self.setImage.loveImageList))
-
+        if self.enterIndex%200 == 0:
+            self.bss.append(Boss(self.screen,self.setImage.bossImages))
+        if len(self.bss) > 0 and self.enterIndex % 120 == 0:
+            for boss in self.bss:
+                if boss.bsIndex == 1:
+                    xw = boss.width / 5
+                    for i in range(0, 4):
+                        self.bssBts.append(
+                            BossBullet(self.screen, self.setImage.bossBullet, boss.x + i * xw, boss.y + boss.height))
     '''第四区域:绘制函数区域'''
     def paint(self):
         # 4.1 绘制背景
@@ -150,6 +161,9 @@ class ShootGame(object):
         self.paintFly()
         #4.5绘制爱心
         self.paintLove()
+        #4.5绘制boss
+        self.paintboss()
+        self.paintBossBu()
     # 4.1 绘制背景图
     def paintBack(self):
         # 修改背景图坐标
@@ -176,6 +190,12 @@ class ShootGame(object):
         for love_ in self.love:
             love_.blitMe()
 
+    def paintboss(self):
+        for boss in self.bss:
+            boss.blitMe()
+    def paintBossBu(self):
+        for bts in self.bssBts:
+            bts.blitMe()
 if __name__ == '__main__':
     game = ShootGame()
     game.main()
