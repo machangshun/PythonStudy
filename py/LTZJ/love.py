@@ -3,8 +3,9 @@ love
 爱心
 '''
 from LTZJ.flyObject import FlyObject
+from LTZJ.Award import Award
 import random
-class Love(FlyObject):
+class Love(FlyObject,Award):
     def __init__(self,screen,images):
         self.screen = screen
         self.images = images
@@ -14,6 +15,7 @@ class Love(FlyObject):
         self.y = -random.randint(0,768)
         self.flag = 0
         self.index = 0
+        self.awardType = random.randint(0,3)
         super(Love,self).__init__(screen,self.image,self.x,self.y)
 
     def step(self):
@@ -30,3 +32,5 @@ class Love(FlyObject):
         else:
             self.x += 1
         self.y +=1
+    def getAward(self):
+        return self.awardType

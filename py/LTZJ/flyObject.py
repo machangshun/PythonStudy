@@ -27,6 +27,17 @@ class FlyObject(object):
     @abc.abstractclassmethod
     def step(self):
        pass
+    #4.碰撞函数 共有函数 所有子类都有
+    def hitBy(self,bt):
+        #子弹边界
+        btX = bt.x
+        btY = bt.y
+        btXW = bt.x + bt.width
+        btYH = bt.y + bt.height
+        #飞行物边界
+        flyX = self.x
+        flyY = self.y
+        flyXW = self.x + self.width
+        flyYH = self.y + self.height
 
-
-
+        return btX > flyX and btXW < flyXW and btY > flyY and btYH < flyYH

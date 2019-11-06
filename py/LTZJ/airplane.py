@@ -3,7 +3,8 @@
 '''
 from LTZJ.flyObject import FlyObject
 import random
-class AirPlane(FlyObject):
+from LTZJ.Enemy import Enemy
+class AirPlane(FlyObject,Enemy):
     def __init__(self,screen,images):
         self.screen = screen
         self.images = images
@@ -19,3 +20,5 @@ class AirPlane(FlyObject):
         ix = self.index / 10 % len(self.images)
         self.image = self.images[int(ix)]
 
+    def getScore(self):
+        return 5
