@@ -207,6 +207,7 @@ class ShootGame(object):
             self.bssBts.remove(bbt)
             if self.hero.life < 0:
                 pass
+
     '''第四区域:绘制函数区域'''
     def paint(self):
         # 4.1 绘制背景
