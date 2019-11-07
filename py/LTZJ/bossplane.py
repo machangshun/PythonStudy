@@ -2,8 +2,9 @@
 Boss
 '''
 from LTZJ.flyObject import FlyObject
+from LTZJ.Enemy import Enemy
 import  random
-class Boss(FlyObject):
+class Boss(FlyObject,Enemy):
     # 1.初始化函数
     def __init__(self,screen,images):
         self.screen = screen
@@ -24,12 +25,11 @@ class Boss(FlyObject):
         self.x = 512/2 - self.width/2
         self.y = 768+random.randint(0,768)
         # 动画效果
-        self.life = 100
         self.index = 0
         '''移动参数'''
         self.xStep = 1
         self.yStep = 1
-
+        self.life = 100
         # 调用父类
         super(Boss,self).__init__(screen,self.image,self.x,self.y)
 
@@ -60,3 +60,5 @@ class Boss(FlyObject):
         self.index += 1
         ix = self.index/10%len(self.images)
         self.image = self.images[self.bsIndex][int(ix)]
+    def getScore(self):
+        return 20

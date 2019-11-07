@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4fed6fa5-e39b-4ab5-b133-154dbf22b44a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.两数之和.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.两数相加.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/46全排列.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/LTZJ/simkai.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Bao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Bomb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Destroy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/NexonGame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/NexonObject.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Pao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Prop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/SetImage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/haihai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/Bombing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerDie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerDown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/PP1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/PP2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/blueHose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/bombUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/cwin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/destroy0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/destroy1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/destroy2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/destroy3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/diban1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/diban2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/diban3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/diban4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/die.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/floor1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/floor2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/hanbingxie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/paoPower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/pwin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/redHouse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/shu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/timg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/yaoshui.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/yellowHose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/zhan1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/zhan2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py/temp/temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/Award.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/Award.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/BossBullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/BossBullet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/Enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/Enemy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/SetImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/SetImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/ShootGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/ShootGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/airplane.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/airplane.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/bossplane.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/bossplane.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/bullet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/flyObject.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/flyObject.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/hero.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/hero.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/love.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/love.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ3/Boss.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ3/Boss.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Leetcode$1_.coverage" NAME="1.两数之和 Coverage Results" MODIFIED="1573368751614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Leetcode$temp.coverage" NAME="temp Coverage Results" MODIFIED="1573527724581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Leetcode$ShootGame.coverage" NAME="ShootGame Coverage Results" MODIFIED="1573308469023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../py/LTZJ" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="529448055">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.47" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1519" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="1519" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/1.两数之和.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2.两数相加.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+              <folding>
+                <marker date="1573613903393" expanded="true" signature="23:28" ph="..." />
+                <marker date="1573613903393" expanded="true" signature="119:322" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/46全排列.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/1.两数之和.py" />
+        <option value="$PROJECT_DIR$/46全排列.py" />
+        <option value="$PROJECT_DIR$/temp.py" />
+        <option value="$PROJECT_DIR$/2.两数相加.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="125" />
+    <option name="y" value="86" />
+    <option name="width" value="974" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.temp">
+    <configuration name="1.两数之和" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.两数之和.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ShootGame" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../py/LTZJ" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../py/LTZJ/ShootGame.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.1.两数之和" />
+      <item itemvalue="Python.ShootGame" />
+      <item itemvalue="Python.temp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.temp" />
+        <item itemvalue="Python.1.两数之和" />
+        <item itemvalue="Python.ShootGame" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fed6fa5-e39b-4ab5-b133-154dbf22b44a" name="Default Changelist" comment="" />
+      <created>1573305003205</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573305003205</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="125" y="86" width="974" height="735" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25929978" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36272877" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../py/LTZJ/ShootGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-468">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../py/LTZJ/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/anaconda3/Lib/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="996" selection-start-line="996" selection-end-line="996" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda3/Lib/site-packages/selenium/webdriver/common/service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/46全排列.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.两数之和.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.两数相加.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding>
+            <marker date="1573613903393" expanded="true" signature="23:28" ph="..." />
+            <marker date="1573613903393" expanded="true" signature="119:322" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

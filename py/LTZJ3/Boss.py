@@ -51,3 +51,4 @@ class Boss(FlyObject, Enemy):
         bs.append(BossBullet(self.screen, self.x + wd * 5, self.y + self.height, images))
         bs.append(BossBullet(self.screen, self.x + wd * 7, self.y + self.height, images))
         return bs
+

@@ -1,5 +1,7 @@
 import abc
 class Award(object):
-    @abc.abstractclassmethod
+    LIFE = 0
+    DOUBLEFIRE = 1
+    @abc.abstractmethod
     def getAward(self):
         pass

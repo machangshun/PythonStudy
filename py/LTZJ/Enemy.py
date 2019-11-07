@@ -1,5 +1,5 @@
 import abc
 class Enemy(object):
-    @abc.abstractclassmethod
+    @abc.abstractmethod
     def getScore(self):
         pass

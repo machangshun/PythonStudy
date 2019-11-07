@@ -22,3 +22,9 @@ class AirPlane(FlyObject,Enemy):
 
     def getScore(self):
         return 5
+
+    def outofBounds(self):
+        if self.y > 768:
+            return True
+        else:
+            return False

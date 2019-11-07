@@ -12,5 +12,10 @@ class Bullet(FlyObject):
     #重写走一步
     def step(self):
         #修改坐标值
-        self.y -= 1
+        self.y -= 3
         #2.动画效果
+    def outofBounds(self):
+        if self.y < -self.height:
+            return True
+        else:
+            return False

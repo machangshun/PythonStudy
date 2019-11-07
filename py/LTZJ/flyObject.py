@@ -24,7 +24,7 @@ class FlyObject(object):
     def blitMe(self):
         self.screen.blit(self.image,(self.x,self.y))
 
-    @abc.abstractclassmethod
+#    @abc.abstractmethod
     def step(self):
        pass
     #4.碰撞函数 共有函数 所有子类都有
@@ -40,3 +40,6 @@ class FlyObject(object):
         flyXW = self.x + self.width
         flyYH = self.y + self.height
         return btX > flyX and btXW < flyXW and btY > flyY and btYH < flyYH
+
+    def outofBounds(self):
+        pass

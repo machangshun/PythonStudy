@@ -2,6 +2,7 @@
 hero
 '''
 from LTZJ.flyObject import FlyObject
+from LTZJ.bullet import Bullet
 '''
 英雄类
 '''
@@ -19,6 +20,7 @@ class Hero(FlyObject):
         self.y = 100
         self.index = 0
         self.life = 10
+        self.doubleFire = 0
         '''调用父类
         super:调用父类
         '''
@@ -35,3 +37,4 @@ class Hero(FlyObject):
     def moveTo(self,mouseX,mouseY):
         self.x = mouseX-self.width/2
         self.y = mouseY-self.height/2
+

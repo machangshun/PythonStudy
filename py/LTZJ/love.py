@@ -15,7 +15,7 @@ class Love(FlyObject,Award):
         self.y = -random.randint(0,768)
         self.flag = 0
         self.index = 0
-        self.awardType = random.randint(0,3)
+        self.awardType = random.randint(0,1)
         super(Love,self).__init__(screen,self.image,self.x,self.y)
 
     def step(self):
@@ -34,3 +34,8 @@ class Love(FlyObject,Award):
         self.y +=1
     def getAward(self):
         return self.awardType
+    def outofBounds(self):
+        if self.y > 768:
+            return True
+        else:
+            return False

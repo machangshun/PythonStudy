@@ -16,3 +16,5 @@ class BossBullet(FlyObject):
         self.index += 1
         ix = self.index / 10 % len(self.images)
         self.image = self.images[int(ix)]
+    def outofBounds(self):
+        return self.y > 768 and self.y < -self.height
