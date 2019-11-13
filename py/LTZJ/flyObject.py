@@ -39,6 +39,13 @@ class FlyObject(object):
         flyY = self.y
         flyXW = self.x + self.width
         flyYH = self.y + self.height
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> aafa63bf1916d3921a93fd44f035b77d30980523
+>>>>>>> 23bb3df008e6353602a64f6bf98a83dd3b62241c
         return btX > flyX and btXW < flyXW and btY > flyY and btYH < flyYH
 
     def outofBounds(self):

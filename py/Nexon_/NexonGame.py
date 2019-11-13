@@ -143,7 +143,6 @@ class NexonGame(object):
                 sys.exit()
             if event.type == pygame.KEYDOWN:
                 #判断比较
-                #上
                 if event.key == pygame.K_w and self.outOfBounds(0,self.bao.row,self.bao.col):
                     self.bao.step(0)
                 if event.key == pygame.K_s and self.outOfBounds(1,self.bao.row,self.bao.col):
@@ -163,8 +162,35 @@ class NexonGame(object):
                 if event.key == pygame.K_j and self.bao.number >= 1:
                     self.bao.number -= 1
                     self.paos.append(Pao(self.screen,self.setImage.paoImages,self.bao.row,self.bao.col))
-                if event.key == pygame.K_RETURN:
+                if event.key == pygame.K_RETURN and self.hai.number >= 1:
+                    self.hai.number -= 1
                     self.paos.append(Pao(self.screen,self.setImage.paoImages,self.hai.row,self.hai.col))
+
+
+
+                # #推箱子
+                if event.key == pygame.K_s and self.bao.row + 2 <= 12 \
+                        and self.buildList[self.bao.row+2][self.bao.col] == 7 and self.buildList[self.bao.row+1][self.bao.col] == 6:
+                    self.bao.step(1)
+                    self.buildList[self.bao.row][self.bao.col] = 7
+                    self.buildList[self.bao.row + 1][self.bao.col] = 6
+                if event.key == pygame.K_a and self.buildList[self.bao.row][self.bao.col-1] == 6\
+                        and self.buildList[self.bao.row][self.bao.col-2] == 7:
+                    self.bao.step(2)
+                    self.buildList[self.bao.row][self.bao.col] = 7
+                    self.buildList[self.bao.row][self.bao.col-1] = 6
+                if event.key == pygame.K_w and self.bao.row-2>=0 and self.buildList[self.bao.row-1][self.bao.col] == 6 \
+                        and self.buildList[self.bao.row-2][self.bao.col] == 7:
+                    self.bao.step(0)
+                    self.buildList[self.bao.row][self.bao.col] = 7
+                    self.buildList[self.bao.row-1][self.bao.col] = 6
+                if event.key == pygame.K_d and self.buildList[self.bao.row][self.bao.col+1] == 6\
+                        and self.buildList[self.bao.row][self.bao.col+2] == 7:
+                    self.bao.step(3)
+                    self.buildList[self.bao.row][self.bao.col] = 7
+                    self.buildList[self.bao.row][self.bao.col+1] = 6
+
+
         self.stepAction()
         self.coinside(self.bao.row,self.bao.col)
         self.coinside(self.hai.row,self.hai.col)
@@ -197,6 +223,7 @@ class NexonGame(object):
                 self.createBomb(pao)
                 self.paos.remove(pao)
                 self.bao.number += 1
+                self.hai.number += 1
         for bomb in self.bombs:
             bomb.step()
             if bomb.life < 0:
@@ -214,10 +241,13 @@ class NexonGame(object):
             if pro.row == bRow and pro.col == bCol:
                 if pro.num == 0:
                     self.bao.speed += 1
+                    self.hai.speed += 1
                 elif pro.num == 1:
                     self.bao.power += 1
+                    self.hai.power += 1
                 else:
                     self.bao.number += 1
+                    self.hai.number += 1
                 self.props.remove(pro)
 
     def createBomb(self,pao):
@@ -250,6 +280,32 @@ class NexonGame(object):
                     self.destroys.append(Destory(self.screen, self.setImage.destoryImages, row, col - i))
             elif pao.LEFT and self.judgeType2(row,col-i):
                 pao.LEFT = False
+        for i in range(1,self.hai.power+1):
+            if pao.DOWN and self.judgeType(row + i, col):
+                self.bombs.append(Bomb(self.screen, self.setImage.bombImages[0], row + i, col))
+                if self.judgeBuildType(row + i, col):
+                    self.destroys.append(Destory(self.screen, self.setImage.destoryImages, row + i, col))
+            elif pao.DOWN and self.judgeType2(row+i,col):
+                pao.DOWN = False
+            if self.judgeType(row - i, col) and pao.UP:
+                self.bombs.append(Bomb(self.screen, self.setImage.bombImages[0], row - i, col))
+                if self.judgeBuildType(row - i, col):
+                    self.destroys.append(Destory(self.screen, self.setImage.destoryImages, row - i, col))
+            elif pao.UP and self.judgeType2(row-i,col):
+                pao.UP = False
+            if self.judgeType(row, col + i) and pao.RIGHT:
+                self.bombs.append(Bomb(self.screen, self.setImage.bombImages[1], row, col + i))
+                if self.judgeBuildType(row, col + i):
+                    self.destroys.append(Destory(self.screen, self.setImage.destoryImages, row, col + i))
+            elif pao.RIGHT and self.judgeType2(row,col+i):
+                pao.RIGHT = False
+            if self.judgeType(row, col - i) and pao.LEFT:
+                self.bombs.append(Bomb(self.screen, self.setImage.bombImages[1], row, col - i))
+                if self.judgeBuildType(row, col - i):
+                    self.destroys.append(Destory(self.screen, self.setImage.destoryImages, row, col - i))
+            elif pao.LEFT and self.judgeType2(row,col-i):
+                pao.LEFT = False
+
 
     def judgeType(self,bRow,bCol):
         if  0<=bRow<= 12 and 0 <= bCol <= 14:
