@@ -2,76 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fed6fa5-e39b-4ab5-b133-154dbf22b44a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.两数之和.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2.两数相加.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/46全排列.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/LTZJ/simkai.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Bao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Bomb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Destroy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/NexonGame.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/NexonObject.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Pao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/Prop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/SetImage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/haihai.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/Bombing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerDie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerDown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerLeft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerRight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/ComputerUp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/PP1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/PP2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/blueHose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/bombUp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/box.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/cwin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/destroy0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/destroy1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/destroy2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/destroy3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/diban1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/diban2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/diban3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/diban4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/die.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/floor1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/floor2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/hanbingxie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/paoPower.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/pwin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/redHouse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/shu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/timg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/yaoshui.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/yellowHose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/zhan1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/Nexon_/img/zhan2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../py/temp/temp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ/Award.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/Award.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ/BossBullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/BossBullet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ/Enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/Enemy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ/SetImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/SetImage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../py/LTZJ/ShootGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/ShootGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ/airplane.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/airplane.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ/bossplane.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/bossplane.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/bullet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../py/LTZJ/flyObject.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/flyObject.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ/hero.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/hero.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ/love.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/love.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py/LTZJ3/Boss.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ3/Boss.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

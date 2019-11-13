@@ -176,6 +176,11 @@ class ShootGame(object):
     def hitAction(self):
         for bt in self.bullets:
             self.hit(bt)
+<<<<<<< HEAD
+=======
+        for bt in self.bullets:
+            self.hitboss(bt)
+>>>>>>> 23bb3df008e6353602a64f6bf98a83dd3b62241c
         for bbt in self.bssBts:
             self.hithero(bbt)
     def hit(self,bt):
@@ -202,8 +207,13 @@ class ShootGame(object):
             #6.删除飞行物
             del self.flys[hitIndex]
             self.bullets.remove(bt)
+<<<<<<< HEAD
             if self.score % 200 == 0:
                 self.level += 1
+=======
+
+    def hitboss(self,bt):
+>>>>>>> 23bb3df008e6353602a64f6bf98a83dd3b62241c
         # 1.设置变量
         hitIndex = -1
         for i in range(0, len(self.bss)):
@@ -233,6 +243,7 @@ class ShootGame(object):
             self.hero.life -= 10
             self.bssBts.remove(bbt)
             if self.hero.life < 0:
+<<<<<<< HEAD
                 self.stateBack = pygame.image.load("img/over.jpg")
                 self.state = self.gameover
     def outAction(self):
@@ -247,6 +258,9 @@ class ShootGame(object):
         for bl in self.bssBts:
             if bl.outofBounds():
                 self.bssBts.remove(bl)
+=======
+                pass
+>>>>>>> 23bb3df008e6353602a64f6bf98a83dd3b62241c
 
     '''第四区域:绘制函数区域'''
     def paint(self):
