@@ -29,10 +29,10 @@ print("title()",hello.title())
 #是开头则返回True
 print("startswith函数：",address.startswith("南京市"))
 
-#9.endswith 以obj结尾
+#9.endswith 以obj结尾.lower转换为小写
 print("endswith函数：",address.endswith("88号"))
 
-#10.lower转换为小写
+#10
 hello = "HELLOWORLD"
 print("lower函数：",hello.lower())
 
@@ -57,7 +57,7 @@ print("lstrip删除左边空白：",hello.lstrip())
 hello = "world          "
 print("rstrip():",hello.rstrip())
 #17.strip 删除两边空白
-hello = "       hello       "
+hello = "       hel lo       "
 print("strip():",hello.strip(),end = "?")
 print("")
 

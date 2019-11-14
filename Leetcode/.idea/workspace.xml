@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fed6fa5-e39b-4ab5-b133-154dbf22b44a" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/../py/snack/SnackGame.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../py/snack/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../py/Nexon_/NexonGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/Nexon_/NexonGame.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/ShootGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/ShootGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py/LTZJ/flyObject.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py/LTZJ/flyObject.py" afterDir="false" />
+>>>>>>> 50b1c4be847c411a792b682e9c5e02dbbb4a163d
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

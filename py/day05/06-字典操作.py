@@ -12,3 +12,4 @@ print("values():",names.values())
 print("items():",names.items())
 
 #5.has_key() 函数 python2.x版本有效
+

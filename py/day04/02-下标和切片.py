@@ -12,10 +12,10 @@ print(address[3])
 3.步长不写，则为加1
 4.加符号，取相反位置
 '''
-#1.macs
+#1.machangshun
 print(address[0:3])
 print(address[0:])
-print(address[:])
+print(address[::-1])
 #隔一个取
 print(address[0::2])
 #隔一个取

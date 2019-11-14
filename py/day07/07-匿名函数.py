@@ -5,7 +5,7 @@
 '''
 #函数名 形参 代码块
 sum = lambda a,b:a+b
-def sum1():
+def sum1(a,b):
     return a+b
 print("加法运算：",sum(10,20))
 

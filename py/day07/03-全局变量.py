@@ -42,9 +42,9 @@ names = ["杨过","小龙女","公孙绿颚"]
 print("names:",id(names))
 print("小龙女",id(names[1]))
 def delList():
-    del names[0]
+    del names[2]
     print("names:",id(names))
-    print("小龙女")
+    print("小龙女",id(names[1]))
 delList()
 print(names)
 

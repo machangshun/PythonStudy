@@ -21,7 +21,7 @@ countList = []
 for index in range(0,countIndex):
     ix = countstr.find("花千骨")
 
-    countList.append(countstr.find("花千骨"))
+    countList.append(ix)
     #切片 ix花
     countstr = countstr[ix+3:]
 #列表处理

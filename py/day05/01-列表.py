@@ -2,6 +2,7 @@
 01-列表
 列表语法【'',''】
 '''
+
 nameList = ['macs','ljy','hm','yhl']
 #1.输出打印
 print(nameList[0])
